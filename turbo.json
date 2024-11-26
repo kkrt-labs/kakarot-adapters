@@ -4,18 +4,34 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+      "inputs": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "components/**/*.tsx",
+        "pages/**/*.mdx",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
     },
     "dev": {
-      "cache": false,
-      "persistent": true
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "lint": {},
+    "lint:fix": {},
+    "format:check": {},
+    "format": {},
+    "clean": {
+      "dependsOn": []
     }
   }
 }
