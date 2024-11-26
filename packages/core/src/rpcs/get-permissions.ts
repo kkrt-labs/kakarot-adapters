@@ -1,6 +1,6 @@
 import { Permission, RpcTypeToMessageMap } from "@starknet-io/types-js";
-import { IStarknetWalletRpc, KakarotAdapterRpc } from "../utils/rpc.js";
-import { createStarkError } from "../utils/errors.js";
+import { IStarknetWalletRpc, KakarotAdapterRpc } from "../utils/rpc";
+import { createStarkError } from "../utils/errors";
 import { getAddress } from "viem";
 
 export type WalletGetPermissionsMethod = "wallet_getPermissions";

@@ -1,1 +1,1 @@
-export { KakarotAdapter } from "./adapter.js";
+export { KakarotAdapter } from "./adapter";

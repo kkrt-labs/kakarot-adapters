@@ -1,10 +1,10 @@
 import type { RpcTypeToMessageMap } from "@starknet-io/types-js";
-import { KakarotAdapterRpc } from "../utils/rpc.js";
-import { createStarkError } from "../utils/errors.js";
+import { KakarotAdapterRpc } from "../utils/rpc";
+import { createStarkError } from "../utils/errors";
 import {
   getCorrespondingKakarotChain,
   ProviderNotFoundError,
-} from "../adapter.js";
+} from "../adapter";
 import { numberToHex } from "viem";
 
 export type WalletSwitchStarknetChainMethod = "wallet_switchStarknetChain";

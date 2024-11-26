@@ -1,8 +1,8 @@
 import { defineChain } from "viem";
 
-import { Chain as StarknetChain } from "./types.js";
+import { Chain as StarknetChain } from "./types";
 import { Chain as KakarotChain } from "viem";
-import { sepolia as sn_sepolia } from "./starknet.js";
+import { sepolia as sn_sepolia } from "./starknet";
 
 type ChainConfig = {
   kakarotChain: KakarotChain;

@@ -27,15 +27,15 @@ import {
   numberToHex,
   toHex,
 } from "viem";
-import { WalletGetPermissions } from "./rpcs/get-permissions.js";
-import { WalletRequestAccount } from "./rpcs/request-account.js";
-import { WalletSwitchStarknetChain } from "./rpcs/switch-network.js";
-import { WalletRequestChainId } from "./rpcs/request-chain-id.js";
-import { WalletAddInvokeTransaction } from "./rpcs/add-invoke.js";
-import { WalletRpcError, WalletRpcErrorCode } from "./utils/errors.js";
-import { CHAIN_CONFIGS, DEFAULT_CHAIN } from "./chains/chains.js";
-import { publicProvider } from "./providers/public.js";
-import { Chain as StarknetChain } from "./chains/types.js";
+import { WalletGetPermissions } from "./rpcs/get-permissions";
+import { WalletRequestAccount } from "./rpcs/request-account";
+import { WalletSwitchStarknetChain } from "./rpcs/switch-network";
+import { WalletRequestChainId } from "./rpcs/request-chain-id";
+import { WalletAddInvokeTransaction } from "./rpcs/add-invoke";
+import { WalletRpcError, WalletRpcErrorCode } from "./utils/errors";
+import { CHAIN_CONFIGS, DEFAULT_CHAIN } from "./chains/chains";
+import { publicProvider } from "./providers/public";
+import { Chain as StarknetChain } from "./chains/types";
 
 const MULTICALL_CAIRO_PRECOMPILE = "0x0000000000000000000000000000000000075003";
 
@@ -192,14 +192,14 @@ export class KakarotAdapter implements StarknetWindowObject {
 
   async getAccounts(): Promise<`0x${string}`[]> {
     if (!this.ethProvider) throw new ProviderNotFoundError();
-    const accounts = await this.ethProvider.request({ method: "eth_accounts" });
+    const accounts: string[] = await this.ethProvider.request({ method: "eth_accounts" } as unknown as any);
     return accounts.map((x: string) => getAddress(x));
   }
 
   async #fetchNetwork() {
     if (!this.ethProvider) throw new ProviderNotFoundError();
     const kakarotChainId = Number(
-      await this.ethProvider.request({ method: "eth_chainId" }),
+      await this.ethProvider.request({ method: "eth_chainId" } as unknown as any),
     );
     const correspondingStarknetChain =
       getCorrespondingStarknetChain(kakarotChainId);

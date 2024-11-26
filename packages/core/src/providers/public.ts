@@ -1,4 +1,4 @@
-import { jsonRpcProvider } from "./jsonrpc.js";
+import { jsonRpcProvider } from "./jsonrpc";
 
 /** Configure the provider to use the public RPC endpoint. */
 export function publicProvider() {

@@ -1,8 +1,8 @@
-import type { Chain } from "../chains/types.js";
+import type { Chain } from "../chains/types";
 import { constants, RpcProvider, type RpcProviderOptions } from "starknet";
 
-import type { ChainProviderFactory } from "./factory.js";
-import { mainnet, sepolia } from "../chains/starknet.js";
+import type { ChainProviderFactory } from "./factory";
+import { mainnet, sepolia } from "../chains/starknet";
 
 /** Arguments for `jsonRpcProvider`. */
 export type JsonRpcProviderArgs = {

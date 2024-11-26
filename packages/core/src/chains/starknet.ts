@@ -5,7 +5,7 @@
 //
 // For example, `encodeShortString('SN_MAIN')` returns `0x535f4d41494e`, which
 // is the chain id.
-import { Chain } from "./types.js";
+import { Chain } from "./types";
 
 export const mainnet = {
   id: BigInt("0x534e5f4d41494e"),

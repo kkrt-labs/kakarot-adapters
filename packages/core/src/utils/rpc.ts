@@ -1,7 +1,7 @@
 import { RpcTypeToMessageMap } from "@starknet-io/types-js";
 import { RpcMessage } from "@starknet-io/types-js";
-import { KakarotAdapter } from "../adapter.js";
-import { createStarkError } from "./errors.js";
+import { KakarotAdapter } from "../adapter";
+import { createStarkError } from "./errors";
 // import { createStarkError } from './error';
 
 export type IStarknetWalletRpc = {

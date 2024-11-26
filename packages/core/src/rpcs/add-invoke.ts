@@ -4,7 +4,7 @@ import type {
   RpcTypeToMessageMap,
 } from "@starknet-io/types-js";
 
-import { KakarotAdapterRpc } from "../utils/rpc.js";
+import { KakarotAdapterRpc } from "../utils/rpc";
 import { encodeAbiParameters, toHex } from "viem";
 import { hash } from "starknet";
 

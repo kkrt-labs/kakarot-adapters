@@ -1,4 +1,4 @@
-import type { Chain } from "../chains/types.js";
+import type { Chain } from "../chains/types";
 import type { ProviderInterface } from "starknet";
 
 export type ChainProviderFactory<

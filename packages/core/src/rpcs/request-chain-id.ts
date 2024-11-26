@@ -1,5 +1,5 @@
 import type { RpcTypeToMessageMap } from "@starknet-io/types-js";
-import { KakarotAdapterRpc } from "../utils/rpc.js";
+import { KakarotAdapterRpc } from "../utils/rpc";
 
 export type WalletRequestChainIdMethod = "wallet_requestChainId";
 type Result = RpcTypeToMessageMap[WalletRequestChainIdMethod]["result"];

@@ -21,7 +21,7 @@
   "devDependencies": {
     "@kakarot-adapters/typescript-config": "workspace:*",
     "tsup": "^8.3.5",
-    "typescript": "latest"
+    "typescript": "5.8.0-dev.20241126"
   },
   "dependencies": {
     "@starknet-io/types-js": "^0.7.8",
