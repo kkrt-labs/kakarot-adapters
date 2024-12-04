@@ -241,11 +241,11 @@ export class KakarotAdapter implements StarknetWindowObject {
     }
 
     if (!this.#starknetNetwork || network !== this.#starknetNetwork) {
-      // address is depends on network, if network changes, address will update
+      // address depends on network, if network changes, address will update
       this.#selectedAddress = await this.#getWalletAddress();
-      // provider is depends on network.nodeUrl, if network changes, set provider to undefine for reinitialization
+      // provider depends on network.nodeUrl, if network changes, set provider to undefine for reinitialization
       this.#starknetProvider = undefined;
-      // account is depends on address and provider, if network changes, address will update,
+      // account depends on address and provider, if network changes, address will update,
       // hence set account to undefine for reinitialization
       this.#account = undefined;
     }
